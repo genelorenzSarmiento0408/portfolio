@@ -183,7 +183,7 @@ const ARTIFACTS_DATA: Record<
     },
     {
       title: "Research Schedule Management",
-      img: "/artifacts/21st/CCS/Sched-RE.png",
+      img: "/artifacts/21st/CCS/sched-RE.png",
       description: "Creating and managing schedule for research project",
       date: "February 3, 2026",
     },
