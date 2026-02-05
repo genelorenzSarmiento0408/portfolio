@@ -183,7 +183,7 @@ const ARTIFACTS_DATA: Record<
     },
     {
       title: "Research Schedule Management",
-      img: "/21st/CCS/SCHED-RE.png",
+      img: "/21st/CCS/Sched-RE.png",
       description: "Creating and managing schedule for research project",
       date: "February 3, 2026",
     },
@@ -212,7 +212,7 @@ const ARTIFACTS_DATA: Record<
   "lifelong-learning": [
     {
       title: "General Biology Digital Notebook",
-      img: "/21st/LLSDPM/notebook.PNG",
+      img: "/21st/LLSDPM/notebook.png",
       description: "Comprehensive digital notebook for General Biology 1",
       date: "1st Semester - Grade 12",
     },
@@ -404,14 +404,14 @@ export default function TwentyFirstCenturySkills() {
                 >
                   {activeSkill.description}
                 </p>
-                <div className="bg-blue-500/10 border border-blue-500/20 p-3 sm:p-4 rounded-lg inline-block">
+                {/* <div className="bg-blue-500/10 border border-blue-500/20 p-3 sm:p-4 rounded-lg inline-block">
                   <span className="text-blue-400 font-bold text-sm uppercase mr-2">
                     Suggested Artifact:
                   </span>
                   <span className={isDark ? "text-gray-300" : "text-gray-700"}>
                     {activeSkill.suggestedArtifact}
                   </span>
-                </div>
+                </div> */}
               </div>
             </div>
 
