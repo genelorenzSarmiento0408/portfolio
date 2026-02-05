@@ -78,7 +78,7 @@ export default function Home() {
           {/* Social Links */}
           <div className="flex gap-4">
             <a
-              href="https://github.com/glsarmiento"
+              href="https://github.com/genelorenzSarmiento0408"
               target="_blank"
               rel="noopener noreferrer"
               className={`p-3 rounded-lg transition-all hover:scale-110 ${isDark ? "bg-gray-800 hover:bg-gray-700" : "bg-gray-200 hover:bg-gray-300"}`}
@@ -87,7 +87,7 @@ export default function Home() {
               <Github size={24} />
             </a>
             <a
-              href="https://linkedin.com/in/glsarmiento"
+              href="https://www.linkedin.com/in/gene-lorenz-sarmiento-51743122b/"
               target="_blank"
               rel="noopener noreferrer"
               className={`p-3 rounded-lg transition-all hover:scale-110 ${isDark ? "bg-gray-800 hover:bg-gray-700" : "bg-gray-200 hover:bg-gray-300"}`}
@@ -96,7 +96,7 @@ export default function Home() {
               <Linkedin size={24} />
             </a>
             <a
-              href="mailto:gene@example.com"
+              href="mailto:genelorenzs@gmail.com"
               className={`p-3 rounded-lg transition-all hover:scale-110 ${isDark ? "bg-gray-800 hover:bg-gray-700" : "bg-gray-200 hover:bg-gray-300"}`}
               aria-label="Email"
             >
@@ -193,13 +193,11 @@ export default function Home() {
               </div>
             </div>
             <div>
-              <div className="text-5xl font-bold text-purple-400 mb-2">
-                100+
-              </div>
+              <div className="text-5xl font-bold text-purple-400 mb-2">2</div>
               <div
                 className={`text-sm uppercase tracking-wider ${isDark ? "text-gray-500" : "text-gray-600"}`}
               >
-                Hours of Learning
+                School Years
               </div>
             </div>
             <div>
