@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useState } from "react";
+import Image from "next/image";
 import {
   Users,
   Brain,
@@ -516,9 +517,15 @@ export default function TwentyFirstCenturySkills() {
                   className={`p-6 rounded-2xl border shadow-2xl ${isDark ? "bg-gradient-to-br from-gray-800 to-gray-900 border-gray-700" : "bg-gradient-to-br from-gray-100 to-gray-200 border-gray-300"}`}
                 >
                   <div
-                    className={`w-24 h-24 bg-blue-600 rounded-full mx-auto mb-4 border-4 shadow-xl flex items-center justify-center text-4xl font-bold text-white ${isDark ? "border-gray-900" : "border-white"}`}
+                    className={`w-24 h-24 rounded-full mx-auto mb-4 border-4 shadow-xl overflow-hidden ${isDark ? "border-gray-900" : "border-white"}`}
                   >
-                    GL
+                    <Image
+                      src="/grad.jpg"
+                      alt="Gene Lorenz"
+                      width={96}
+                      height={96}
+                      className="w-full h-full object-cover"
+                    />
                   </div>
                   <div className="text-center">
                     <h2 className="text-xl font-bold">Gene Lorenz</h2>
