@@ -81,6 +81,13 @@ const ARTIFACTS_DATA: Record<
   ],
   "data-analysis": [
     {
+      title: "SSAIGE Research - Statistical Analysis",
+      img: "/logical/STATS/jasp.png",
+      description:
+        "Data interpretation from SSAIGE research showing low p-value for experimental group, demonstrating the research's statistical significance and success",
+      date: "December 2025",
+    },
+    {
       title: "Statistical Data Analysis Project",
       img: "/artifacts/21st/CL/MATH-2.png",
       description:
@@ -226,18 +233,6 @@ export default function LogicalMathematicalIntelligence() {
                   isDark={isDark}
                 />
               ))}
-                      className={`text-2xl ${isDark ? "text-gray-500" : "text-gray-400"}`}
-                    >
-                      +
-                    </span>
-                  </div>
-                  <p
-                    className={`text-sm font-medium ${isDark ? "text-gray-500" : "text-gray-600"}`}
-                  >
-                    Add New Artifact
-                  </p>
-                </div>
-              </div>
             </div>
           </div>
         ) : (
