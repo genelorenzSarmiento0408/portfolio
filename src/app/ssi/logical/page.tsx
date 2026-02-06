@@ -85,7 +85,7 @@ const ARTIFACTS_DATA: Record<
       img: "/logical/STATS/jasp.png",
       description:
         "Data interpretation from SSAIGE research showing low p-value for experimental group, demonstrating the research's statistical significance and success",
-      date: "December 2025",
+      date: "January-February 2026, Grade 12",
     },
     {
       title: "Statistical Data Analysis Project",
@@ -229,7 +229,6 @@ export default function LogicalMathematicalIntelligence() {
                   skill={artifact.title}
                   img={artifact.img}
                   description={artifact.description}
-                  date={artifact.date}
                   isDark={isDark}
                 />
               ))}
