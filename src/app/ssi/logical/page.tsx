@@ -15,66 +15,154 @@ import {
 import Artifact from "@/components/Artifact";
 import Navbar from "@/components/Navbar";
 
+const ARTIFACTS_DATA: Record<
+  string,
+  Array<{ title: string; img: string; description: string; date: string }>
+> = {
+  competitions: [
+    {
+      title: "Scaled Down Distances Problem",
+      img: "/artifacts/21st/CT-PS/Astro-1.png",
+      description:
+        "Figure answer demonstrating problem-solving approach for scaled down distances in IAAC (International Astronomy and Astrophysics Competition)",
+      date: "November 2025",
+    },
+    {
+      title: "Molarity Calculation Using I-P-O Method",
+      img: "/artifacts/21st/CT-PS/Chem-1.png",
+      description:
+        "Applied Input-Process-Output method to solve molarity problems in chemistry",
+      date: "January 2025",
+    },
+    {
+      title: "PV=NRT Law Diagram",
+      img: "/artifacts/21st/CT-PS/Chem-p6-1.png",
+      description:
+        "Visual diagram explaining the ideal gas law (PV=NRT) for International Physics Competition",
+      date: "January 2026",
+    },
+    {
+      title: "Static Balance Problem",
+      img: "/artifacts/21st/CT-PS/P6-1.png",
+      description:
+        "Diagram showing systematic approach to solving static balance problems in International Physics Competition",
+      date: "January 2026",
+    },
+  ],
+  "group-leader": [
+    {
+      title: "Group Leader - General Mathematics",
+      img: "/artifacts/21st/CL/MATH-1.png",
+      description:
+        "Served as group leader for Grade 11 General Mathematics, facilitating collaborative learning and guiding peers through complex mathematical concepts",
+      date: "Grade 11 - Term 1",
+    },
+    {
+      title: "Group Leader - Statistics",
+      img: "/artifacts/21st/CL/MATH-2.png",
+      description:
+        "Led group discussions and activities in Statistics, helping classmates understand statistical analysis and data interpretation",
+      date: "Grade 11 - Term 2",
+    },
+    {
+      title: "Group Leader - Pre-Calculus",
+      img: "/artifacts/21st/CL/MATH-3.png",
+      description:
+        "Guided peers through Pre-Calculus concepts, organizing study sessions and collaborative problem-solving activities",
+      date: "Grade 12 - Term 1",
+    },
+    {
+      title: "Group Leader - Basic Calculus",
+      img: "/artifacts/21st/CL/MATH-4.png",
+      description:
+        "Facilitated group learning in Basic Calculus, breaking down complex calculus concepts for peer understanding",
+      date: "Grade 12 - Term 2",
+    },
+  ],
+  "data-analysis": [
+    {
+      title: "Statistical Data Analysis Project",
+      img: "/artifacts/21st/CL/MATH-2.png",
+      description:
+        "Conducted comprehensive statistical analysis using real-world datasets, applying hypothesis testing and regression analysis",
+      date: "Grade 11 - Term 2",
+    },
+    {
+      title: "Data Interpretation and Visualization",
+      img: "/artifacts/21st/CL/MATH-2.png",
+      description:
+        "Created data visualizations and interpreted complex datasets to derive meaningful insights and conclusions",
+      date: "Grade 11 - Grade 12",
+    },
+  ],
+  "top-scorers": [
+    {
+      title: "Exemplary Score - General Mathematics",
+      img: "/artifacts/21st/CL/MATH-1.png",
+      description:
+        "Achieved top scores in General Mathematics, demonstrating mastery of fundamental mathematical concepts",
+      date: "Grade 11 - Term 1",
+    },
+    {
+      title: "Exemplary Score - Statistics",
+      img: "/artifacts/21st/CL/MATH-2.png",
+      description:
+        "Consistently scored at the top in Statistics, showcasing strong understanding of statistical methods and analysis",
+      date: "Grade 11 - Term 2",
+    },
+    {
+      title: "Exemplary Score - Pre-Calculus",
+      img: "/artifacts/21st/CL/MATH-3.png",
+      description:
+        "Demonstrated excellence in Pre-Calculus with outstanding performance across all assessments",
+      date: "Grade 12 - Term 1",
+    },
+    {
+      title: "Exemplary Score - Basic Calculus",
+      img: "/artifacts/21st/CL/MATH-4.png",
+      description:
+        "Achieved exceptional scores in Basic Calculus, showing advanced understanding of calculus principles",
+      date: "Grade 12 - Term 2",
+    },
+  ],
+};
+
 const LOGICAL_MATH_DATA = [
   {
-    id: "pattern-recognition",
-    title: "Pattern Recognition",
-    icon: <GitBranch className="w-6 h-6" />,
-    color: "border-purple-500",
-    description:
-      "Ability to identify patterns, sequences, and relationships in mathematical and logical structures.",
-    suggestedArtifact:
-      "Analysis of algorithmic patterns or mathematical sequence solutions demonstrating pattern identification skills.",
-  },
-  {
-    id: "problem-solving",
-    title: "Mathematical Problem Solving",
+    id: "competitions",
+    title: "Mathematics Competitions",
     icon: <Calculator className="w-6 h-6" />,
     color: "border-blue-500",
     description:
-      "Using mathematical operations and logical reasoning to solve complex numerical problems.",
-    suggestedArtifact:
-      "Collection of solved mathematical problems with detailed step-by-step solutions and explanations.",
+      "Participated in various mathematics and science competitions, demonstrating problem-solving skills and mathematical reasoning under pressure.",
+    artifactCount: ARTIFACTS_DATA["competitions"]?.length || 0,
   },
   {
-    id: "algorithmic-thinking",
-    title: "Algorithmic Thinking",
-    icon: <Binary className="w-6 h-6" />,
-    color: "border-green-500",
+    id: "group-leader",
+    title: "Group Leader Gallery",
+    icon: <Brain className="w-6 h-6" />,
+    color: "border-purple-500",
     description:
-      "Developing systematic approaches and algorithms to solve computational problems efficiently.",
-    suggestedArtifact:
-      "Flowcharts, pseudocode, or actual code implementations demonstrating algorithmic problem-solving.",
+      "Served as group leader across all mathematics subjects (Gen Math, Statistics, Pre-Calculus, Basic Calculus), facilitating peer learning and collaboration.",
+    artifactCount: ARTIFACTS_DATA["group-leader"]?.length || 0,
   },
   {
     id: "data-analysis",
     title: "Data Analysis & Interpretation",
     icon: <PieChart className="w-6 h-6" />,
+    color: "border-green-500",
+    description:
+      "Analyzing datasets, drawing insights, and making data-driven decisions using statistical methods and visualization techniques.",
+    artifactCount: ARTIFACTS_DATA["data-analysis"]?.length || 0,
+  },
+  {
+    id: "top-scorers",
+    title: "Top Scorers Gallery",
+    icon: <Zap className="w-6 h-6" />,
     color: "border-orange-500",
     description:
-      "Analyzing datasets, drawing insights, and making data-driven decisions using statistical methods.",
-    suggestedArtifact:
-      "Data visualization projects, statistical analysis reports, or research with quantitative findings.",
-  },
-  {
-    id: "logical-reasoning",
-    title: "Logical Reasoning",
-    icon: <Brain className="w-6 h-6" />,
-    color: "border-cyan-500",
-    description:
-      "Using deductive and inductive reasoning to draw valid conclusions from given premises.",
-    suggestedArtifact:
-      "Logic puzzle solutions, proof-based mathematics, or philosophical argument analysis.",
-  },
-  {
-    id: "computational-thinking",
-    title: "Computational Thinking",
-    icon: <Zap className="w-6 h-6" />,
-    color: "border-pink-500",
-    description:
-      "Breaking down complex problems into manageable parts using abstraction and decomposition.",
-    suggestedArtifact:
-      "Software projects, coding challenges, or system design documentation showing problem decomposition.",
+      "Showcasing exemplary scores and academic excellence across all mathematics subjects throughout Grade 11 and Grade 12.",
+    artifactCount: ARTIFACTS_DATA["top-scorers"]?.length || 0,
   },
 ];
 
@@ -119,35 +207,25 @@ export default function LogicalMathematicalIntelligence() {
               </p>
               <div className="bg-blue-500/10 border border-blue-500/20 p-4 rounded-lg inline-block">
                 <span className="text-blue-400 font-bold text-sm uppercase mr-2">
-                  Suggested Artifact:
+                  Artifacts:
                 </span>
                 <span className={isDark ? "text-gray-300" : "text-gray-700"}>
-                  {activeSkill.suggestedArtifact}
+                  {activeSkill.artifactCount} artifacts documented
                 </span>
               </div>
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-              <Artifact
-                skill={activeSkill.title}
-                img=""
-                description={`Evidence of ${activeSkill.title} through applied mathematical and logical projects.`}
-                isDark={isDark}
-              />
-              <Artifact
-                skill={`${activeSkill.title} - Reflection`}
-                img=""
-                description="Personal reflection on development of this logical-mathematical skill."
-                isDark={isDark}
-              />
-              <div
-                className={`border-2 border-dashed rounded-xl flex items-center justify-center p-8 transition-colors cursor-pointer group ${isDark ? "border-gray-800 hover:border-gray-600" : "border-gray-300 hover:border-gray-400"}`}
-              >
-                <div className="text-center">
-                  <div
-                    className={`w-12 h-12 rounded-full flex items-center justify-center mx-auto mb-3 group-hover:scale-110 transition-transform ${isDark ? "bg-gray-800" : "bg-gray-200"}`}
-                  >
-                    <span
+              {ARTIFACTS_DATA[activeSkill.id]?.map((artifact, index) => (
+                <Artifact
+                  key={index}
+                  skill={artifact.title}
+                  img={artifact.img}
+                  description={artifact.description}
+                  date={artifact.date}
+                  isDark={isDark}
+                />
+              ))}
                       className={`text-2xl ${isDark ? "text-gray-500" : "text-gray-400"}`}
                     >
                       +
@@ -229,12 +307,17 @@ export default function LogicalMathematicalIntelligence() {
                       <div
                         className={`py-2 rounded text-xs font-mono text-purple-400 border border-purple-500/20 ${isDark ? "bg-gray-950/50" : "bg-purple-50"}`}
                       >
-                        ✓ 6 Skills Documented
+                        ✓ 4 Categories Documented
                       </div>
                       <div
                         className={`py-2 rounded text-xs font-mono text-blue-400 border border-blue-500/20 ${isDark ? "bg-gray-950/50" : "bg-blue-50"}`}
                       >
-                        ✓ 12 Artifacts Linked
+                        ✓{" "}
+                        {Object.values(ARTIFACTS_DATA).reduce(
+                          (sum, artifacts) => sum + artifacts.length,
+                          0,
+                        )}{" "}
+                        Artifacts Linked
                       </div>
                     </div>
                   </div>
