@@ -117,6 +117,12 @@ const ARTIFACTS_DATA: Record<
       description: "Research leader for Grade 12 capstone project",
       date: "Grade 12",
     },
+    {
+      title: "I.T. Department Leadership - CREOTEC Work Immersion",
+      img: "/artifacts/21st/CL/CREOTEC.png",
+      description: "I.T. Department Group Leader in Creotec batch 25H",
+      date: "October 06-17, 2025; Grade 12",
+    },
   ],
   "digital-literacy": [
     {
@@ -172,6 +178,13 @@ const ARTIFACTS_DATA: Record<
       img: "/artifacts/21st/Comm/drc.png",
       description: "Presenting at the 2nd KLD Dasma Research Congress",
       date: "2025",
+    },
+    {
+      title: "2ND HORIZONS RESEARCH CONGRESS",
+      img: "/artifacts/21st/Comm/HORIZONS.png",
+      description:
+        "Presenting at the roundtable of the 2nd HORIZONS Research Congress here in SSI (Screen-captured)",
+      date: "February 05, 2026",
     },
   ],
   "control-coping": [

@@ -1,10 +1,11 @@
 import React from "react";
-import { ExternalLink } from "lucide-react";
+import { ExternalLink, Calendar } from "lucide-react";
 
 interface ArtifactProps {
   skill: string;
   img: string;
   description: string;
+  date?: string;
   isDark?: boolean;
 }
 
@@ -12,6 +13,7 @@ export default function Artifact({
   skill,
   img,
   description,
+  date,
   isDark = true,
 }: ArtifactProps) {
   return (
@@ -31,9 +33,6 @@ export default function Artifact({
             <span className="text-xs font-mono">NO_IMAGE_PLACEHOLDER</span>
           </div>
         )}
-        <div className="absolute top-2 right-2 bg-blue-600 text-[10px] px-2 py-1 rounded-full text-white font-bold opacity-0 group-hover:opacity-100 transition-opacity">
-          VIEW ARTIFACT
-        </div>
       </div>
       <div className="p-4">
         <h4
@@ -41,6 +40,14 @@ export default function Artifact({
         >
           {skill}
         </h4>
+        {date && (
+          <div
+            className={`flex items-center gap-1 mb-2 text-xs ${isDark ? "text-gray-500" : "text-gray-500"}`}
+          >
+            <Calendar size={12} />
+            <span>{date}</span>
+          </div>
+        )}
         <p
           className={`text-sm leading-relaxed ${isDark ? "text-gray-400" : "text-gray-600"}`}
         >

@@ -21,6 +21,20 @@ const ARTIFACTS_DATA: Record<
 > = {
   competitions: [
     {
+      title: "Bronze Award - IAAC",
+      img: "/artifacts/logical/COMPE/IAAC.png",
+      description:
+        "Won Bronze Award in the International Astronomy and Astrophysics Competition, demonstrating excellence in astronomy and astrophysics problem-solving",
+      date: "November 2025",
+    },
+    {
+      title: "International Physics Competition Participation",
+      img: "/artifacts/logical/COMPE/IPhyC.png",
+      description:
+        "Participated in the International Physics Competition, applying physics principles to solve complex problems",
+      date: "January 2026",
+    },
+    {
       title: "Scaled Down Distances Problem",
       img: "/artifacts/21st/CT-PS/Astro-1.png",
       description:
@@ -82,51 +96,37 @@ const ARTIFACTS_DATA: Record<
   "data-analysis": [
     {
       title: "SSAIGE Research - Statistical Analysis",
-      img: "/logical/STATS/jasp.png",
+      img: "/artifacts/logical/STATS/jasp.png",
       description:
         "Data interpretation from SSAIGE research showing low p-value for experimental group, demonstrating the research's statistical significance and success",
       date: "January-February 2026, Grade 12",
-    },
-    {
-      title: "Statistical Data Analysis Project",
-      img: "/artifacts/21st/CL/MATH-2.png",
-      description:
-        "Conducted comprehensive statistical analysis using real-world datasets, applying hypothesis testing and regression analysis",
-      date: "Grade 11 - Term 2",
-    },
-    {
-      title: "Data Interpretation and Visualization",
-      img: "/artifacts/21st/CL/MATH-2.png",
-      description:
-        "Created data visualizations and interpreted complex datasets to derive meaningful insights and conclusions",
-      date: "Grade 11 - Grade 12",
     },
   ],
   "top-scorers": [
     {
       title: "Exemplary Score - General Mathematics",
-      img: "/artifacts/21st/CL/MATH-1.png",
+      img: "/artifacts/logical/TOP/Gen-math.heic",
       description:
         "Achieved top scores in General Mathematics, demonstrating mastery of fundamental mathematical concepts",
       date: "Grade 11 - Term 1",
     },
     {
       title: "Exemplary Score - Statistics",
-      img: "/artifacts/21st/CL/MATH-2.png",
+      img: "/artifacts/logical/TOP/STATS-1.png",
       description:
         "Consistently scored at the top in Statistics, showcasing strong understanding of statistical methods and analysis",
       date: "Grade 11 - Term 2",
     },
     {
       title: "Exemplary Score - Pre-Calculus",
-      img: "/artifacts/21st/CL/MATH-3.png",
+      img: "/artifacts/logical/TOP/Pre-cal.png",
       description:
         "Demonstrated excellence in Pre-Calculus with outstanding performance across all assessments",
       date: "Grade 12 - Term 1",
     },
     {
       title: "Exemplary Score - Basic Calculus",
-      img: "/artifacts/21st/CL/MATH-4.png",
+      img: "/artifacts/logical/TOP/BASCAL.png",
       description:
         "Achieved exceptional scores in Basic Calculus, showing advanced understanding of calculus principles",
       date: "Grade 12 - Term 2",
@@ -137,7 +137,7 @@ const ARTIFACTS_DATA: Record<
 const LOGICAL_MATH_DATA = [
   {
     id: "competitions",
-    title: "Mathematics Competitions",
+    title: "Mathematics/Physics Competitions",
     icon: <Calculator className="w-6 h-6" />,
     color: "border-blue-500",
     description:
@@ -229,6 +229,7 @@ export default function LogicalMathematicalIntelligence() {
                   skill={artifact.title}
                   img={artifact.img}
                   description={artifact.description}
+                  date={artifact.date}
                   isDark={isDark}
                 />
               ))}
@@ -362,6 +363,116 @@ export default function LogicalMathematicalIntelligence() {
                   </div>
                 </div>
               ))}
+            </div>
+
+            {/* Overall Reflection Section */}
+            <div className="mt-12 sm:mt-16">
+              <div
+                className={`p-4 sm:p-6 lg:p-8 rounded-2xl border ${isDark ? "bg-gray-900 border-gray-800" : "bg-white border-gray-200 shadow-lg"}`}
+              >
+                <h2 className="text-2xl sm:text-3xl font-bold mb-4 sm:mb-6 flex items-center gap-2 sm:gap-3">
+                  <Brain className="text-purple-400" size={24} />
+                  Reflection on Logical-Mathematical Intelligence
+                </h2>
+                <div className="space-y-3 sm:space-y-4">
+                  <p
+                    className={`text-sm sm:text-base leading-relaxed ${isDark ? "text-gray-300" : "text-gray-700"}`}
+                  >
+                    My journey in developing logical-mathematical intelligence
+                    has been one of discovery and continuous refinement. When I
+                    first encountered complex mathematical problems and
+                    scientific challenges, I relied heavily on memorization and
+                    formula application. Over time, however, I have learned to
+                    think more systematically, approaching problems with a
+                    deeper understanding of underlying principles rather than
+                    surface-level techniques.
+                  </p>
+                  <p
+                    className={`leading-relaxed ${isDark ? "text-gray-300" : "text-gray-700"}`}
+                  >
+                    Participating in international competitions like the
+                    International Astronomy and Astrophysics Competition—where I
+                    earned a Bronze Award—and the International Physics
+                    Competition taught me valuable lessons beyond winning or
+                    losing. These experiences showed me that mathematical and
+                    scientific reasoning requires more than finding the right
+                    answer quickly. It demands understanding the problem deeply,
+                    considering multiple approaches, and learning from mistakes.
+                    Each problem I solved, whether successfully or not,
+                    contributed to building my analytical mindset.
+                  </p>
+                  <p
+                    className={`leading-relaxed ${isDark ? "text-gray-300" : "text-gray-700"}`}
+                  >
+                    Serving as a group leader across four mathematics
+                    subjects—General Mathematics, Statistics, Pre-Calculus, and
+                    Basic Calculus—was particularly transformative. Initially, I
+                    thought leadership meant explaining concepts to others the
+                    way I understood them. However, I soon realized that
+                    different people process mathematical information
+                    differently. Some students needed visual representations,
+                    others preferred step-by-step logical sequences, and some
+                    learned best through real-world applications. Adapting my
+                    explanations to meet diverse learning styles helped my peers
+                    while simultaneously deepening my own understanding of
+                    mathematical concepts.
+                  </p>
+                  <p
+                    className={`leading-relaxed ${isDark ? "text-gray-300" : "text-gray-700"}`}
+                  >
+                    The SSAIGE research project stands out as a pivotal
+                    experience in my development of data analysis skills.
+                    Conducting statistical analysis and interpreting the
+                    results—particularly seeing the low p-value for the
+                    experimental group that confirmed our research's
+                    success—gave me practical insight into how mathematics
+                    applies to real-world problems. I learned that statistical
+                    significance involves drawing meaningful conclusions that
+                    can inform decisions and validate hypotheses. This project
+                    bridged the gap between theoretical knowledge and practical
+                    application.
+                  </p>
+                  <p
+                    className={`leading-relaxed ${isDark ? "text-gray-300" : "text-gray-700"}`}
+                  >
+                    My consistent performance as a top scorer across all
+                    mathematics subjects reflects a fundamental shift in how I
+                    approach learning itself. Rather than studying for exams
+                    alone, I began viewing each topic as part of a larger
+                    interconnected system. Calculus built on pre-calculus, which
+                    extended algebra and geometry. Statistics connected to
+                    research methodology. This holistic perspective helped me
+                    see patterns and relationships that made learning more
+                    intuitive and less about rote memorization.
+                  </p>
+                  <p
+                    className={`leading-relaxed ${isDark ? "text-gray-300" : "text-gray-700"}`}
+                  >
+                    Looking ahead, I recognize that logical-mathematical
+                    intelligence extends far beyond solving equations or winning
+                    competitions. It is about cultivating a mindset that values
+                    precision, seeks patterns, questions assumptions, and
+                    approaches challenges with systematic rigor. These skills
+                    will serve me in any field I pursue—whether in science,
+                    technology, research, or other disciplines that require
+                    analytical thinking. The foundation I have built through
+                    these experiences will continue to grow as I encounter new
+                    problems and opportunities for learning.
+                  </p>
+                  <p
+                    className={`leading-relaxed ${isDark ? "text-gray-300" : "text-gray-700"}`}
+                  >
+                    This portfolio represents more than a collection of
+                    mathematical achievements. It documents my evolution as a
+                    logical thinker, a problem solver, and a learner who
+                    understands that intelligence is not fixed but developed
+                    through dedication, curiosity, and persistence. I am proud
+                    of what I have accomplished, while remaining aware that
+                    there is always more to learn and discover in the
+                    fascinating world of mathematics and logical reasoning.
+                  </p>
+                </div>
+              </div>
             </div>
           </div>
         )}
