@@ -2,6 +2,7 @@
 
 import React from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { Moon, Sun } from "lucide-react";
 
 interface NavbarProps {
@@ -19,8 +20,14 @@ export default function Navbar({ isDark, onToggleTheme }: NavbarProps) {
           href="/"
           className="flex items-center gap-3 hover:opacity-80 transition-opacity cursor-pointer"
         >
-          <div className="w-10 h-10 bg-blue-600 rounded-lg flex items-center justify-center font-bold text-xl">
-            GL
+          <div className="w-10 h-10 rounded-lg overflow-hidden">
+            <Image
+              src="/logo512.png"
+              alt="Gene Lorenz Logo"
+              width={40}
+              height={40}
+              className="w-full h-full object-cover"
+            />
           </div>
           <span className="font-bold tracking-tight hidden sm:block">
             Gene Lorenz | Portfolio

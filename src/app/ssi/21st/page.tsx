@@ -81,29 +81,53 @@ const ARTIFACTS_DATA: Record<
   ],
   collaboration: [
     {
-      title: "Mathematics Collaboration - Gen Math",
+      title: "Mathematics Competitions",
       img: "/artifacts/21st/CL/MATH-1.png",
       description:
-        "Collaborative learning and problem-solving in General Mathematics",
+        "Participated in various mathematics competitions, demonstrating problem-solving skills and mathematical reasoning under pressure",
+      date: "Grade 11 - Grade 12",
+    },
+    {
+      title: "Group Leader - General Mathematics",
+      img: "/artifacts/21st/CL/MATH-1.png",
+      description:
+        "Served as group leader for Grade 11 General Mathematics, facilitating collaborative learning and guiding peers through complex mathematical concepts",
       date: "Grade 11 - Term 1",
     },
     {
-      title: "Mathematics Collaboration - Statistics",
+      title: "Group Leader - Statistics",
       img: "/artifacts/21st/CL/MATH-2.png",
-      description: "Team-based statistical analysis and data interpretation",
+      description:
+        "Led group discussions and activities in Statistics, helping classmates understand statistical analysis and data interpretation",
       date: "Grade 11 - Term 2",
     },
     {
-      title: "Mathematics Collaboration - Pre-Calculus",
+      title: "Group Leader - Pre-Calculus",
       img: "/artifacts/21st/CL/MATH-3.png",
-      description: "Collaborative pre-calculus problem sets and solutions",
+      description:
+        "Guided peers through Pre-Calculus concepts, organizing study sessions and collaborative problem-solving activities",
       date: "Grade 12 - Term 1",
     },
     {
-      title: "Mathematics Collaboration - Basic Calculus",
+      title: "Group Leader - Basic Calculus",
       img: "/artifacts/21st/CL/MATH-4.png",
-      description: "Advanced calculus collaboration and peer teaching",
+      description:
+        "Facilitated group learning in Basic Calculus, breaking down complex calculus concepts for peer understanding",
       date: "Grade 12 - Term 2",
+    },
+    {
+      title: "Data Analysis and Interpretation",
+      img: "/artifacts/21st/CL/MATH-2.png",
+      description:
+        "Conducted comprehensive data analysis projects, applying statistical methods to real-world datasets and presenting findings",
+      date: "Grade 11 - Grade 12",
+    },
+    {
+      title: "Top Scorer - Mathematics Excellence",
+      img: "/artifacts/21st/CL/MATH-3.png",
+      description:
+        "Consistently achieved exemplary scores across all mathematics subjects, demonstrating mastery in General Mathematics, Statistics, Pre-Calculus, and Basic Calculus",
+      date: "Grade 11 - Grade 12",
     },
     {
       title: "Research Leadership - G11",
